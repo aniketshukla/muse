@@ -1,0 +1,23 @@
+{
+  "name": "muse",
+  "description": "Json Web Token secured RESTful application that patches JSON and generates thumbnail provided image",
+  "version": "0.0.1",
+  "private": true,
+  "author": "aniketshukla",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aniketshukla/muse.git"
+  },
+  "dependencies": {
+    "gm": "^1.23.0",
+    "jsonpatch": "^3.0.1",
+    "jsonwebtoken": "^7.4.3",
+    "mongoose": "~4.11.7",
+    "morgan": "~1.8.2",
+    "request": "^2.81.0",
+    "restify": "~5.2.0"
+  },
+  "devDependencies": {
+    "grunt": "~1.0.1"
+  }
+}
