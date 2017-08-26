@@ -18,6 +18,8 @@
     "restify": "~5.2.0"
   },
   "devDependencies": {
-    "grunt": "~1.0.1"
+    "chai": "^4.1.1",
+    "grunt": "~1.0.1",
+    "mocha": "^3.5.0"
   }
 }
