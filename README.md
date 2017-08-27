@@ -63,6 +63,13 @@ docker build -t muse .
 docker run -p 3000:3000 muse
 ```
 
+##Changing the JWT secret
+Currently the JWT secret is set to 'aniket' but you could change it setting process.env['secret']
+
+```
+export secret= BruceWayneisBatman
+```
+
 ## Internal Documentation
 #### Lib
 Lib contains the core functionality of the application
