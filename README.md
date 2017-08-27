@@ -132,7 +132,7 @@ Restify routes to handle requests and send a valid response
 ### index.js
 Restify script to start the application.
 The code is fairly documented.
-To change port just replace port 8080 with any valid port number.
+To change port just replace port 3000 with any valid port number.
 To read further about customizing the application - http://restify.com/.
 ## Authors
 
