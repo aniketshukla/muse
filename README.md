@@ -9,6 +9,10 @@ Please ensure that following external dependencies are installed
 1. GraphicMagicK - https://gist.github.com/abernardobr/f7b3190176b90f2ac4b2
 1. Nodejs - https://nodejs.org/en/download/ (tested on 6.9.1)
 
+##An important note
+#You might have to run the product via root user because of the external image library or you could just provide user access to the required library
+
+
 ### Installing
 
 Install all the dependency
@@ -21,7 +25,37 @@ npm install --save
 
 '''
 npm test
+//or
+sudo npm test
 '''
+
+## Running the code
+
+'''
+npm start
+//or
+sudo npm start
+'''
+
+## Running the coverage test
+
+'''
+npm run coverage
+//or
+sudo npm run coverage
+'''
+## Generating JSdoc
+
+'''
+//For the lib folder
+jsdoc  lib/
+//For Lib and Controller
+jsdoc controller/ lib/
+'''   
+
+##Docker
+
+A basic Dockerfile and docker-compose.yml have been included to build and run a docker image 
 
 ## Internal Documentation
 #### Lib
