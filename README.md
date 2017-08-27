@@ -6,7 +6,7 @@ Provides support for JSON patching and image compression while ensuring a valid 
 
 Please ensure that following external dependencies are installed
 
-1. GraphicMagicK -http://www.graphicsmagick.org/download.html
+1. GraphicMagicK - https://gist.github.com/abernardobr/f7b3190176b90f2ac4b2
 1. Nodejs - https://nodejs.org/en/download/ (tested on 6.9.1)
 
 ### Installing
@@ -77,23 +77,23 @@ Restify controllers to handle requests and send a valid response
 #### Routes
 Restify routes to handle requests and send a valid response
 1. /signin -> signs a user in and returns a valid token
-   Example response
-   1. {err:error describing why it is occurring}
-   2. {token:a valid jswt token}
+   1. Example response
+     1. {err:error describing why it is occurring}
+     2. {token:a valid jswt token}
 2. /patch/json -> patches JSON
-   Example response
-   1. {err:error describing error}
-   2. {patched json}
+   1. Example response
+     1. {err:error describing error}
+     2. {patched json}
 3. /convert/image -> compresses image
-   Example response
-   1. {err:error describing a valid error}
-   2. Redirects to compressed image
+   1. Example response
+     1. {err:error describing a valid error}
+     2. Redirects to compressed image
 
 ### index.js
-Restify script to start the application
-The code is fairly documented
-To change port just replace port with your any valid port number
-To read further about customizing the application - http://restify.com/
+Restify script to start the application.
+The code is fairly documented.
+To change port just replace port with your any valid port number.
+To read further about customizing the application - http://restify.com/.
 ## Authors
 
 ***Aniket Shukla** - *Initial work* - [aniketshukla](https://github.com/aniketshukla)
