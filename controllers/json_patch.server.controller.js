@@ -15,8 +15,12 @@ exports.patch_json = function (req, res, next) {
     // all above condition should be fullfilled
     res.send(400, {err: 'Invalid parameter , supply json_object and the required patch'});
   } else {
-    req.body.json_object = JSON.parse(req.body.json_object);
-    req.body.json_patch = JSON.parse(req.body.json_patch);
+    if (typeof (req.body.json_object) === String) {
+      req.body.json_object = JSON.parse(req.body.json_object);
+    }
+    if (typeof (req.body.json_patch) === String) {
+      req.body.json_patch = JSON.parse(req.body.json_patch);
+    }
     // catches error if one is thrown while patching
     try {
       let result = JsonPatcher.apply_patch(req.body.json_object, req.body.json_patch);

@@ -4,7 +4,7 @@
 */
 
 var Logger = require('bunyan');
-
+var path = require('path');
 /**
 exports a logger
 */
@@ -16,23 +16,23 @@ module.exports = new Logger({
       level: 'debug'
     },
     {
-      path: './logger/trace.log',
+      path: path.join(__dirname, '/trace.log'),
       level: 'trace'
     },
     {
-      path: './logger/fatal.log',
+      path: path.join(__dirname, '/fatal.log'),
       level: 'fatal'
     },
     {
-      path: './logger/error.log',
+      path: path.join(__dirname, '/error.log'),
       level: 'error'
     },
     {
-      path: './logger/warn.log',
+      path: path.join(__dirname, '/warn.log'),
       level: 'warn'
     },
     {
-      path: './logger/info.log',
+      path: path.join(__dirname, '/info.log'),
       level: 'info'
     }
   ],

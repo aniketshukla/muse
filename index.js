@@ -14,7 +14,8 @@ Declaring server properties
 const server = restify.createServer({
   name: 'muse',
   version: '0.0.1',
-  log: logger
+  log: logger,
+  address: 'http://localhost:8080'
 });
 
 server.use(restify.plugins.acceptParser(server.acceptable));
@@ -41,3 +42,5 @@ server.on('restifyError', function (req, res, err, cb) {
 server.listen(8080, function () {
   console.log('%s listening at %s', server.name, server.url);
 });
+
+module.exports = server;
