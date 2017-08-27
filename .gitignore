@@ -85,6 +85,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-public/**.*
-public/*
+public/**
 !public/
+!public/compressed
