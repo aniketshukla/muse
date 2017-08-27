@@ -18,7 +18,7 @@ describe('Image', function () {
 });
 
 describe('Image', function () {
-  this.timeout(100000);
+  this.timeout(1000000);
   describe('#convertImage', function () {
     it('should load the user image in public/compressed', function (done) {
       var newImage = new Image(newImageLink);
