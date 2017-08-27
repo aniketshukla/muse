@@ -8,8 +8,8 @@ var Image = require('./../lib/image.lib.server');
 * @description - converts images , requires req.body.url
 * names the compressed image by replacing the '/' by ''
 * @function convert_image - controller
-* @param req
-* @param res
+* @param {object} req
+* @param {object} res
 */
 exports.convert_image = function (req, res, next) {
   if (req.query.url === undefined) {

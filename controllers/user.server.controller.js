@@ -7,8 +7,8 @@ var UserClass = require('./../lib/user.lib.server');
 /**
 * @description - signs in , returns a token
 * @function sign_in - controller
-* @param req
-* @param res
+* @param {object} req
+* @param {object} res
 */
 exports.sign_in = function (req, res, next) {
   if (req.body.username === undefined || req.body.password === undefined) {
@@ -25,8 +25,8 @@ exports.sign_in = function (req, res, next) {
 * @description - verifies token
 * and passes it on to next controller
 * @function verify - controller
-* @param req
-* @param res
+* @param {object} req
+* @param {object} res
 */
 exports.verify = function (req, res, next) {
   var token;
