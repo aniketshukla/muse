@@ -86,5 +86,5 @@ Temporary Items
 .apdisk
 
 public/**.*
-public/compressed/*.*
-!public/compressed/
+public/*
+!public/
