@@ -23,39 +23,45 @@ npm install --save
 
 ## Running the tests
 
-'''
+```
 npm test
 //or
 sudo npm test
-'''
+```
 
 ## Running the code
 
-'''
+```
 npm start
 //or
 sudo npm start
-'''
+```
 
 ## Running the coverage test
 
-'''
+```
 npm run coverage
 //or
 sudo npm run coverage
-'''
+```
+
 ## Generating JSdoc
 
-'''
+```
 //For the lib folder
 jsdoc  lib/
 //For Lib and Controller
 jsdoc controller/ lib/
-'''   
+```  
 
 ##Docker
 
-A basic Dockerfile and docker-compose.yml have been included to build and run a docker image 
+A basic Dockerfile and docker-compose.yml have been included to build and run a docker image
+
+```
+docker build -t muse .
+docker run -p 3000:3000 muse
+```
 
 ## Internal Documentation
 #### Lib
