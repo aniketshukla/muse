@@ -26,6 +26,8 @@ npm test
 ## Internal Documentation
 #### Lib
 Lib contains the core functionality of the application
+
+lib/image.lib.server.js handles all the Image functionality
 ```javascript
 //creating Object from Class
 let newImage = new Image(url);
@@ -44,6 +46,23 @@ callback = function(error, info){...}
 newImage.end()
 ```
 
+lib/user.lib.server.js contains all of the User functionality
+```javascript
+//creating Object from Class
+let newUser = new User(username, password);
+
+//get Token i.e gets the JWT token from username(getter)
+let token = newuser.Token;
+
+//@static function to verify token
+//takes token and callback as arguments
+newUser.verifyToken (token, callback)
+//callback accepts error and decoded as parameter
+callback = function(error, decoded){...}
+//error => error could be invalid token , crypto library shutting down Node due to
+//unavailable memory
+//decoded => contains the decoded token
+```
 
 
 ## Authors
