@@ -10,7 +10,7 @@ Please ensure that following external dependencies are installed
 1. Nodejs - https://nodejs.org/en/download/ (tested on 6.9.1)
 
 ## An important note
-### You might have to run the product via root user because of the external image library or you could just provide user access to the required library
+### You might have to run the product via root user because of the external image library or, you could just provide user access to the required library
 
 
 ### Installing
