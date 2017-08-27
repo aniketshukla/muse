@@ -52,7 +52,7 @@ lib/user.lib.server.js contains all of the User functionality
 let newUser = new User(username, password);
 
 //get Token i.e gets the JWT token from username(getter)
-let token = newuser.Token;
+let token = newUser.Token;
 
 //@static function to verify token
 //takes token and callback as arguments
@@ -63,7 +63,16 @@ callback = function(error, decoded){...}
 //unavailable memory
 //decoded => contains the decoded token
 ```
+#### Controllers
+Restify controllers to handle requests and send a valid response
 
+1. /controllers/image.server.controller.js
+   1. export.convert_image takes in url as a get parameter
+1. /controllers/user.server.controller.js
+   1. sign_in - takes username and password as post parameter , returns a valid JWT
+   1. verify - verifies token , this is a static function , sends control to next controller using next()
+1. /controllers/json_patch.server.controller.js
+   1. patch_json - takes in json_object and json_patch as patch parameter
 
 ## Authors
 
