@@ -15,7 +15,8 @@ const server = restify.createServer({
   name: 'muse',
   version: '0.0.1',
   log: logger,
-  address: 'http://localhost:8080'
+  address: 'http://localhost:3000',
+  url: 'http://localhost:3000'
 });
 
 server.use(restify.plugins.acceptParser(server.acceptable));
@@ -32,15 +33,16 @@ server.get(/\/public\/.*/, restify.plugins.serveStatic({
   directory: __dirname
 }));
 
-server.on('restifyError', function (req, res, err, cb) {
+server.on('uncaughtException', function (req, res, err, cb) {
   // this listener will fire after both events above!
   // `err` here is the same as the error that was passed to the above
   // error handlers.
   server.log.error({req: req, res: res, err: err});
+  return res.send(500, err);
 });
 
-server.listen(8080, function () {
-  console.log('%s listening at %s', server.name, server.url);
+server.listen(3000, function () {
+  console.log('Running server at port 3000');
 });
 
 module.exports = server;
