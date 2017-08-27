@@ -21,7 +21,8 @@ exports.convert_image = function (req, res, next) {
     // loading ImageNew
     ImageNew.loadImage((err) => {
       if (err) {
-        return res.send(500, {err: err});
+        res.send(500, {err: err});
+        next(err);
       } else {
         // Converting Image
         ImageNew.convertImage((err, info) => {

@@ -10,9 +10,9 @@ var UserClass = require('./../lib/user.lib.server');
 * @param req
 * @param res
 */
-exports.sign_in = function (req, res) {
+exports.sign_in = function (req, res, next) {
   if (req.body.username === undefined || req.body.password === undefined) {
-    return res.send(200, (
+    return res.send(400, (
       {'err': 'Missing parameter , please ensure both username and password are supplied'}));
   } else {
     // Creates a UserClass and sends a 201 creation token
@@ -48,8 +48,9 @@ exports.verify = function (req, res, next) {
     // verify Token
     UserClass.verifyToken(token, (err, decoded) => {
       if (err) {
-        return res.send(502, (
+        res.send(502, (
           {'err': 'Invlaid Token'}));
+        return next(err);
       } else {
         req.token = decoded;
         // next - passes req and res to next controller
