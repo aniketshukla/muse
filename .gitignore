@@ -86,6 +86,8 @@ Temporary Items
 .apdisk
 
 public/**
+public/compressed/**
+public/compressed/**.*
 !public/
 !public/compressed
 !public/compressed/README.txt
