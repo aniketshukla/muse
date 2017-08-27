@@ -6,8 +6,8 @@ Provides support for JSON patching and image compression while ensuring a valid 
 
 Please ensure that following external dependencies are installed
 
-GraphicMagicK -http://www.graphicsmagick.org/download.html
-Nodejs - https://nodejs.org/en/download/ (tested on 6.9.1)
+1. GraphicMagicK -http://www.graphicsmagick.org/download.html
+1. Nodejs - https://nodejs.org/en/download/ (tested on 6.9.1)
 
 ### Installing
 
@@ -19,17 +19,33 @@ npm install --save
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+'''
+npm test
+'''
 
-### Break down into end to end tests
+## Internal Documentation
+#### Lib
+Lib contains the core functionality of the application
+```javascript
+//creating Object from Class
+let newImage = new Image(url);
 
-Explain what these tests test and why
+//Loading image i.e downloading image to the public folder (uncompressed)
+newImage.loadImage(callback);
+//callback accepts error as a parameter
+callback = function(error){...};
 
+//convertingImage
+newImage.convertingImage(callback)
+//callback accepts error and info as parameter
+callback = function(error, info){...}
+
+//delete uncompressed image
+newImage.end()
 ```
-Give an example
-```
+
 
 
 ## Authors
 
-* **Aniket Shukla** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+***Aniket Shukla** - *Initial work* - [aniketshukla](https://github.com/aniketshukla)
