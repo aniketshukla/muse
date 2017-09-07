@@ -29,7 +29,7 @@ exports.sign_in = function (req, res, next) {
 * @param {object} res
 */
 exports.verify = function (req, res, next) {
-  var token;
+  let token;
   // The token can be present in following req properties
   // 1)Header - Authorization
   // 2)body.token - Post request

@@ -11,4 +11,6 @@ var UserController = require('./../controllers/user.server.controller');
 */
 module.exports = function (server) {
   server.get('/convert/image', UserController.verify, ImageController.convert_image);
+  server.get('download/image', UserController.verify, ImageController.download_image);
+  server.get('zip/image', UserController.verify, ImageController.zip);
 };
